@@ -49,3 +49,9 @@ cd node1
 
 Follow along using the tutorial.
 https://besu.hyperledger.org/en/stable/Tutorials/Private-Network/Create-Private-Clique-Network/#1-create-directories
+
+touch cliqueGenesis.json
+vim cliqueGenesis.json
+
+Install Grafana 
+https://www.muvi.com/blogs/install-grafana-on-ec2-and-start-with-an-autostart-for-monitoring.html
