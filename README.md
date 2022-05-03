@@ -1,4 +1,4 @@
-# besu-aws-edx. \
+# besu-aws-edx. 
 
 Create an instance with security group :sg-002ed640d5dd8a2da: (launch-wizard-4). \
 \
@@ -9,9 +9,7 @@ below mentioned ports are all TCP \
 8547,8545, 30303, 8546, 9545. \
 After instance starts, SSH into it.
 
-Now comes the real stuff. Hold on!!!. \
 
-Run the following
 ```bash
 sudo apt-get update && sudo apt-get install openjdk-11-jdk
 
@@ -20,10 +18,12 @@ sudo apt-get install unzip
 unzip besu-22.4.0-RC2.zip
 ```
 
-Update the ~.bashrc profile or 
+Update the bashrc profile or 
+```bash
 export PATH=$PATH:~/besu-22.4.0-RC/bin
+```
 
-type besu --help to check if everything if besu is installed properly
+type besu --help to check if besu is installed properly
 ```bash
 sudo apt install tree
 mkdir Clique-network
