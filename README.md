@@ -11,6 +11,9 @@ After instance starts, SSH into it.
 
 
 ```bash
+echo 'ClientAliveInterval 60' | sudo tee --append /etc/ssh/sshd_config
+sudo service ssh restart |for ubuntu
+sudo service sshd restart |for other linux
 sudo apt-get update && sudo apt-get install openjdk-11-jdk
 
 wget https://hyperledger.jfrog.io/artifactory/besu-binaries/besu/22.4.0-RC2/besu-22.4.0-RC2.zip
@@ -26,15 +29,15 @@ export PATH=$PATH:~/besu-22.4.0-RC/bin
 type besu --help to check if besu is installed properly
 ```bash
 sudo apt install tree
-mkdir Clique-network
-cd Clique-network
 ```
 Alternatily 
 
 ```bash
-mkdir -p Clique-Network/{Node-1/{data},Node-2/{data},Node-3/{data}}
+rm -r besu-22.4.0-RC2.zip
+mv besu-22.4.0-RC2 besu
+mkdir -p Clique-Network/{node-1/data,node-2/data,node-3/data}
 cd node1
-~/besu-22.4.0-RC2/bin/besu --data-path=data public-key export-address --to=data/node1Address
+~/besu/bin/besu --data-path=data public-key export-address --to=data/node1Address
 ```
 
 Follow along using the tutorial.
